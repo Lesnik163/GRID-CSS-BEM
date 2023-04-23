@@ -1,0 +1,43 @@
+@media screen and (max-width: $breakpoint1) {
+    .header {
+      margin: 0 auto;
+      max-width: 98%;
+    }
+  }
+  @media screen and (max-width: $breakpoint3) {
+    .header {
+      grid-template-columns: 15% 52% 20%;
+    }
+    .header__contacts {
+      grid-template-columns: 170px;
+    }
+    .header__contacts .phoneNumber {
+      display: none;
+    }
+  }
+  @media screen and (max-width: $breakpoint4) {
+    .header {
+      grid-template-columns: 1fr;
+      grid-template-rows: 55px;
+      align-items: center;
+      background: black;
+      max-width: 100%;
+    }
+    .header__logo, .header__contacts, .header__logo-comment, .header__list-item:last-child {
+      display: none;
+    }
+    .header__list {
+      grid-template-columns: repeat(4, 1fr);
+      justify-items: center;
+      padding-bottom: 0;
+    }
+  }
+  @media screen and (max-width: $breakpoint5) {
+    .header__list {
+      justify-content: space-around;
+    }
+    .header__list-item {
+      font-size: 12px;
+      margin: 0;
+    }
+  }

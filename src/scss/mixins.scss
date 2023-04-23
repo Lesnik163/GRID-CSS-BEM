@@ -1,0 +1,15 @@
+@mixin fontStyle($fontFam, $src, $fontWeight,$fontSz){
+    font-family: $fontFam,Arial, Helvetica, sans-serif;
+    src: $src;
+    font-weight: $fontWeight;
+    font-size: $fontSz; 
+}
+// @mixin 
+@mixin containerOrientation($margin,$width){
+    margin: $margin;
+    max-width: $width;
+}
+@mixin listWithoutStyles{
+    list-style: none;
+}
+
