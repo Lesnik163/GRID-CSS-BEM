@@ -7,13 +7,13 @@
 }
 body{
     @include fontStyle(Inter,$srcInter,500,16px);
-    background:no-repeat url('../../../assets/Desktop-original.svg');
-    color:white;
+    color:$textColor;
     font-family: Inter,Arial, Helvetica, sans-serif;
+    background:no-repeat url('../../../assets/Desktop-original.svg');
     background-clip: border-box;
-    background-color: chartreuse;
-    background-position: 5% 0%;
-}
+    background-color:$backColor;
+    background-position: 50% 0%;
+    margin: 0 auto;
 .wrapper{
     @include containerOrientation(0 auto, $bodyAndMainWd);
 }
@@ -23,11 +23,11 @@ body{
 .header{
     display:grid;
     grid-template-columns: 13% 44% 35%;
-    grid-auto-rows: 75px;
+    grid-template-rows: 75px;
     column-gap: 4%;
     align-items: end;
     &__list{
-        @include listWithoutStyles;
+        list-style: none;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         padding-bottom: 5px;
@@ -53,4 +53,125 @@ body{
 .header__logo-comment{
     @include fontStyle(Montserrat,$srcMontserrat,300,10px);
     align-self: start;
+}
+// main
+.main__container{
+    @include containerOrientation(0,$bodyAndMainWd)
+}
+.main{
+    display:grid;
+    grid-template-columns: 40% 31%;
+    grid-template-rows: auto auto;
+    justify-content: space-between;
+    margin-top: 94px;
+    margin-bottom: 173px;
+    grid-template-areas: 'left right'
+                          '. button';
+    &__left-block{
+        grid-area: left;
+    }
+    &__right-block{
+        grid-area: right;
+        margin-top: 10px;
+    }
+    &__button{
+        grid-area: button;
+        width: 262px;
+        height: 61px;
+        margin: 61px 10px 0px 0px;
+        justify-self: end;
+        background: $buttonColor;
+        font-size: 16px;
+        color:$textColor;
+        border:none;
+    }
+    &__left-header{
+        @include fontStyle(Inter,$srcInter,400,48px);
+        .colorText{
+            @include gradientText(900);
+        }
+    }
+    &__right-header{
+        @include fontStyle(Inter,$srcInter,700,18px);
+        text-align: end;
+        .colorText{
+            @include gradientText(700);
+        }
+    }
+    &__left-paragraph{
+        margin-top:30px;
+        width:68%;
+        font-size: 18px;
+    }   
+}
+.quatroBlock-mobile{
+    display: none;
+}
+.quatroBlock{
+    display: grid;
+    grid-template-columns: repeat(2, 125px);
+    grid-auto-rows: minmax(auto,80px);
+    row-gap: 30px;
+    column-gap:36px;
+    justify-content: end;
+    text-align: end;
+    margin-top: 40px;
+    &__header{
+        @include fontStyle(Inter,$srcInter,500,18px);
+
+    }
+    &__span{
+        @include fontStyle(Montserrat,$srcMontserrat,400,16px)
+    }
+}
+//footer
+.footer-container{
+    @include containerOrientation(124px 0 0 0,$headerAndFooterWd);
+}
+.footer{
+    display:grid;
+    grid-template-columns: 200px 425px 300px;
+    grid-column-gap: 107px;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'block1 block2 block3'
+                         '. . commentBlock';
+    &__header{
+        @include fontStyle(Montserrat,$srcMontserrat,400,14px);
+        margin-bottom:20px;
+        color:$headersColor;
+    }                     
+    &__block1{
+        grid-area:block1;
+    }                     
+    &__block2{
+        grid-area:block2;
+        .footer__list{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    &__block3{
+        grid-area:block3;
+        display: grid;
+        grid-template-rows: repeat(4,40px);
+        text-align: end;
+    }                     
+    &__block4{
+        grid-area:commentBlock;
+        @include fontStyle(Montserrat,$srcMontserrat,400,12px);
+        text-align: end;
+        margin-bottom: 20px;
+        margin-top: 33px;
+    }
+    &__comment_underline{
+        text-decoration: underline;
+        line-height: 20px;
+    }                     
+    &__list{
+        list-style: none;
+        &-item{
+            padding-bottom: 10px;
+        }
+    }
+}
 }

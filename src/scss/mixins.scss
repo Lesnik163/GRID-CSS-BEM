@@ -9,7 +9,10 @@
     margin: $margin;
     max-width: $width;
 }
-@mixin listWithoutStyles{
-    list-style: none;
+@mixin gradientText($fontWeight){
+    font-weight: $fontWeight;
+    color: transparent;
+    background-clip: text;
+    background-image: linear-gradient( to right, #FCB045, #FF3F78);
 }
 

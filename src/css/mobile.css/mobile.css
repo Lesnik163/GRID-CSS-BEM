@@ -1,5 +1,13 @@
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1192px) {
   .header {
+    margin: 0 auto;
+    max-width: 98%;
+  }
+  .main {
+    margin: 94px auto 118px auto;
+    max-width: 98%;
+  }
+  .footer {
     margin: 0 auto;
     max-width: 98%;
   }
@@ -15,6 +23,10 @@
   }
   .header__contacts .phoneNumber {
     display: none;
+  }
+  .main {
+    -ms-grid-columns: 46% 36%;
+    grid-template-columns: 46% 36%;
   }
 }
 @media screen and (max-width: 900px) {
@@ -42,6 +54,41 @@
     justify-items: center;
     padding-bottom: 0;
   }
+  .main {
+    -ms-grid-columns: 54% 41%;
+    grid-template-columns: 54% 41%;
+  }
+}
+@media screen and (max-width: 685px) {
+  .main {
+    -ms-grid-columns: 54%;
+    grid-template-columns: 54%;
+        grid-template-areas: "left" "right";
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 40px;
+  }
+  .main__button {
+    display: none;
+  }
+  .main__right-header {
+    text-align: start;
+    margin-top: 45px;
+  }
+  .main__left-header {
+    font-size: 36px;
+  }
+  .main__left-paragraph {
+    margin-top: 15px;
+    width: 92%;
+  }
+  .main .quatroBlock {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    text-align: start;
+  }
 }
 @media screen and (max-width: 500px) {
   .header__list {
@@ -51,5 +98,60 @@
   .header__list-item {
     font-size: 12px;
     margin: 0;
+  }
+  .main-container {
+    background: no-repeat url(../../../assets/mobilescreen.svg);
+    background-clip: border-box;
+    background-color: #1E1E1E;
+    background-size: cover;
+  }
+  .main {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    width: 90%;
+    -ms-grid-columns: 100%;
+    grid-template-columns: 100%;
+    padding: 45px 0;
+    margin: 0 auto;
+  }
+  .main__right-header > .colorText {
+    text-transform: lowercase;
+  }
+  .quatroBlock {
+    display: none;
+  }
+  .quatroBlock-mobile {
+    display: -ms-grid;
+    display: grid;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+    font-weight: 400;
+    font-size: 13px;
+    -ms-grid-columns: (132px)[2];
+    grid-template-columns: repeat(2, 132px);
+    -ms-grid-rows: 1fr 14px 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 14px;
+    margin-top: 20px;
+  }
+  .quatroBlock-mobile > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .quatroBlock-mobile > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .quatroBlock-mobile > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+  .quatroBlock-mobile > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+  }
+  .quatroBlock-mobile__img {
+    padding-bottom: 4px;
   }
 }

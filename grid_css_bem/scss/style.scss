@@ -1,0 +1,51 @@
+@import 'varibles';
+@import 'mixins';
+* {
+    margin: 0 ;
+    padding:0;
+}
+#grid{
+    float:left;
+    width:100%;
+
+    >div{
+       @include grid(7, 5%); 
+    }
+}
+.block:not(.first){
+   @include padd( 20px 40px);
+    background: $bgColor;
+    height:200px;
+    margin-bottom: 20px;
+    width: $blockWidth;
+    border: $border;
+}
+.first{
+    width: $blockWidth;
+    border: $border;
+    background: $bgColor;
+    height: 100px;
+    margin-bottom: 20px;
+}
+#central_block{
+   padding: 30px; 
+
+   ul{
+    list-style: none;
+    display: inline-block;
+   }
+   li{
+    float:left;
+    width:(100% + 30%);
+        a {
+            @include font($fontW,$color:blue);
+           &:hover{
+            color:red;
+           } 
+        }
+        
+    }
+    a{
+        @include font(bold,blue);
+    }
+}

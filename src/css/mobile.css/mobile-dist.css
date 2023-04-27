@@ -1,0 +1,55 @@
+@media screen and (max-width: 1140px) {
+  .header {
+    margin: 0 auto;
+    max-width: 98%;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .header {
+    -ms-grid-columns: 15% 52% 20%;
+    grid-template-columns: 15% 52% 20%;
+  }
+  .header__contacts {
+    -ms-grid-columns: 170px;
+    grid-template-columns: 170px;
+  }
+  .header__contacts .phoneNumber {
+    display: none;
+  }
+}
+@media screen and (max-width: 900px) {
+  .header {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: 55px;
+    grid-template-rows: 55px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background: black;
+    max-width: 100%;
+  }
+  .header > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .header__logo, .header__contacts, .header__logo-comment, .header__list-item:last-child {
+    display: none;
+  }
+  .header__list {
+    -ms-grid-columns: (1fr)[4];
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    padding-bottom: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .header__list {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .header__list-item {
+    font-size: 12px;
+    margin: 0;
+  }
+}

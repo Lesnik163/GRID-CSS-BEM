@@ -1,0 +1,56 @@
+@import '../../scss/mixins.scss';
+@import '../../scss/variables';
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    @include fontStyle(Inter,$srcInter,500,16px);
+    background:no-repeat url('../assets/Desktop-original.svg');
+    color:white;
+    font-family: Inter,Arial, Helvetica, sans-serif;
+    background-clip: border-box;
+    background-color: chartreuse;
+    background-position: 5% 0%;
+}
+.wrapper{
+    @include containerOrientation(0 auto, $bodyAndMainWd);
+}
+.header__container{
+    @include containerOrientation(0,$headerAndFooterWd);
+}
+.header{
+    display:grid;
+    grid-template-columns: 13% 44% 35%;
+    grid-auto-rows: 75px;
+    column-gap: 4%;
+    align-items: end;
+    &__list{
+        @include listWithoutStyles;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        padding-bottom: 5px;
+
+        &-item{
+            margin-right: 30px;
+        }
+        &-item:last-child{
+            margin: 0;
+        }
+    }
+    &__contacts{
+        display: grid;
+        grid-template-columns: 145px 169px;
+        justify-self: end;
+        .social-network{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-items: end;
+        }
+    }
+}
+.header__logo-comment{
+    @include fontStyle(Montserrat,$srcMontserrat,300,10px);
+    align-self: start;
+}

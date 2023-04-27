@@ -1,5 +1,16 @@
+@import '../mixins.scss';
+@import '../variables.scss';
+
 @media screen and (max-width: $breakpoint1) {
     .header {
+      margin: 0 auto;
+      max-width: 98%;
+    }
+    .main{
+      margin: 94px auto 118px auto;
+      max-width: 98%;
+    }
+    .footer{
       margin: 0 auto;
       max-width: 98%;
     }
@@ -13,6 +24,9 @@
     }
     .header__contacts .phoneNumber {
       display: none;
+    }
+    .main{
+      grid-template-columns: 46% 36%;
     }
   }
   @media screen and (max-width: $breakpoint4) {
@@ -31,13 +45,73 @@
       justify-items: center;
       padding-bottom: 0;
     }
+    .main{
+      grid-template-columns: 54% 41%;
+    }
   }
   @media screen and (max-width: $breakpoint5) {
+    .main{
+      grid-template-columns: 54%;
+      grid-template-areas: 'left'
+      'right';
+      justify-content: center;
+      margin-top: 40px;
+      &__button{
+        display:none;
+      }
+      &__right-header{
+        text-align: start;
+        margin-top: 45px;
+      }
+      &__left-header{
+        font-size:36px;
+      }
+      &__left-paragraph{
+        margin-top: 15px;
+        width: 92%;
+      }
+      .quatroBlock{
+        justify-content: start;
+        text-align: start;
+      }
+    }
+  }
+  @media screen and (max-width: $breakpoint6) {
     .header__list {
       justify-content: space-around;
     }
     .header__list-item {
       font-size: 12px;
       margin: 0;
+    }
+    .main-container{
+      background:no-repeat url(../../../assets/mobilescreen.svg);
+      background-clip: border-box;
+      background-color: $backColor;
+      background-size: cover;
+    }
+    .main{
+      justify-content: start;
+      width:90%;
+      grid-template-columns: 100%;
+      padding:45px 0;
+      margin:0 auto;
+      &__right-header>.colorText{
+        text-transform: lowercase;
+      }
+    }
+    .quatroBlock{
+      display:none;
+    }
+    .quatroBlock-mobile{
+      display: grid;
+      @include fontStyle(Montserrat,$srcMontserrat,400,13px);
+      grid-template-columns: repeat(2,132px);
+      grid-template-rows: repeat(2,1fr);
+      row-gap: 14px;
+      margin-top: 20px;
+      &__img{
+        padding-bottom: 4px;
+      }
     }
   }
