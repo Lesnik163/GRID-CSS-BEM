@@ -2,20 +2,25 @@
 @import '../variables.scss';
 
 @media screen and (max-width: $breakpoint1) {
-    .header {
-      margin: 0 auto;
-      max-width: 98%;
+    .wrapper{
+      width:98%;
     }
     .main{
-      margin: 94px auto 118px auto;
-      max-width: 98%;
+      margin: 94px auto 173px auto;
     }
+    
+  }
+  @media screen and (max-width: $breakpoint2) {
     .footer{
-      margin: 0 auto;
-      max-width: 98%;
+      grid-column-gap: 0;
+      justify-content: space-between;
     }
   }
   @media screen and (max-width: $breakpoint3) {
+    body{
+      background-position: 32% 0%;
+      background-size: cover;
+    }
     .header {
       grid-template-columns: 15% 52% 20%;
     }
@@ -27,9 +32,30 @@
     }
     .main{
       grid-template-columns: 46% 36%;
+      margin-bottom: 50px;
+    }
+    body .footer{
+      grid-template-rows: auto;
+      grid-template-columns: auto;
+      grid-template-areas: 'block1'
+                           'block2'
+                           'block3'
+                           'block4';
+      justify-content: center;
+      &__block4, &__block3{
+        grid-column: 1;
+        text-align: start;
+      }
     }
   }
   @media screen and (max-width: $breakpoint4) {
+    .wrapper{
+      width:100%;
+      .header-container, .main-container{
+        width:98%;
+        margin:0 auto;
+      }
+    }
     .header {
       grid-template-columns: 1fr;
       grid-template-rows: 55px;
@@ -47,6 +73,12 @@
     }
     .main{
       grid-template-columns: 54% 41%;
+    }
+    .footer-container{
+      background: black;
+    }
+    .footer{
+      padding-top: 40px;
     }
   }
   @media screen and (max-width: $breakpoint5) {
@@ -73,6 +105,16 @@
       .quatroBlock{
         justify-content: start;
         text-align: start;
+      }
+    }
+    .footer{
+      width: 88%;
+      margin: 0 auto;
+      &__header{
+        @include fontStyle(Inter,$srcInter,400,14px)
+      }
+      &__list-item{
+        @include fontStyle(Montserrat,$srcMontserrat,400,14px)
       }
     }
   }
@@ -113,5 +155,52 @@
       &__img{
         padding-bottom: 4px;
       }
+    }
+    @for $i from 1 to 4 {
+      .footer__block#{$i} {
+        margin-bottom: 30px;
+      }
+    }
+    .footer__block4{
+      margin-top: 0;
+    }
+    .adress{
+      font-size: 14px;
+    }
+    .footer__block2{
+      .footer__list{
+        grid-template-columns: 115px 115px;
+        &-item{
+          width:115px;
+        }
+        &-item:nth-child(2n){
+          padding-left: 15px;
+        }
+      }
+    }
+    .footer__list-item:nth-child(2){
+      visibility: hidden;
+      visibility: hidden;
+      padding: 0;
+      margin-bottom: -10px;
+    } 
+    .footer__list-item:nth-child(2)::before{
+      visibility: visible;
+      content: 'Благодарность клиентов';
+    } 
+    .footer__list-item:nth-child(4){
+      visibility: hidden;
+      visibility: hidden;
+      padding: 0;
+      margin-bottom: -10px;
+    } 
+    .footer__list-item:nth-child(4)::before{
+      visibility: visible;
+      content: 'Кейсы';
+    } 
+  }
+  @media screen and (max-width:325px){
+    .main-container{
+      background-size:auto;
     }
   }

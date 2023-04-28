@@ -1,18 +1,25 @@
+@charset "UTF-8";
 @media screen and (max-width: 1192px) {
-  .header {
-    margin: 0 auto;
-    max-width: 98%;
+  .wrapper {
+    width: 98%;
   }
   .main {
-    margin: 94px auto 118px auto;
-    max-width: 98%;
+    margin: 94px auto 173px auto;
   }
+}
+@media screen and (max-width: 1160px) {
   .footer {
-    margin: 0 auto;
-    max-width: 98%;
+    grid-column-gap: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 @media screen and (max-width: 1050px) {
+  body {
+    background-position: 32% 0%;
+    background-size: cover;
+  }
   .header {
     -ms-grid-columns: 15% 52% 20%;
     grid-template-columns: 15% 52% 20%;
@@ -27,9 +34,32 @@
   .main {
     -ms-grid-columns: 46% 36%;
     grid-template-columns: 46% 36%;
+    margin-bottom: 50px;
+  }
+  body .footer {
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+    -ms-grid-columns: auto;
+    grid-template-columns: auto;
+        grid-template-areas: "block1" "block2" "block3" "block4";
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .footer__block4, body .footer__block3 {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    text-align: start;
   }
 }
 @media screen and (max-width: 900px) {
+  .wrapper {
+    width: 100%;
+  }
+  .wrapper .header-container, .wrapper .main-container {
+    width: 98%;
+    margin: 0 auto;
+  }
   .header {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
@@ -57,6 +87,12 @@
   .main {
     -ms-grid-columns: 54% 41%;
     grid-template-columns: 54% 41%;
+  }
+  .footer-container {
+    background: black;
+  }
+  .footer {
+    padding-top: 40px;
   }
 }
 @media screen and (max-width: 685px) {
@@ -88,6 +124,22 @@
         -ms-flex-pack: start;
             justify-content: start;
     text-align: start;
+  }
+  .footer {
+    width: 88%;
+    margin: 0 auto;
+  }
+  .footer__header {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .footer__list-item {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
+    font-weight: 400;
+    font-size: 14px;
   }
 }
 @media screen and (max-width: 500px) {
@@ -153,5 +205,55 @@
   }
   .quatroBlock-mobile__img {
     padding-bottom: 4px;
+  }
+  .footer__block1 {
+    margin-bottom: 30px;
+  }
+  .footer__block2 {
+    margin-bottom: 30px;
+  }
+  .footer__block3 {
+    margin-bottom: 30px;
+  }
+  .footer__block4 {
+    margin-top: 0;
+  }
+  .adress {
+    font-size: 14px;
+  }
+  .footer__block2 .footer__list {
+    -ms-grid-columns: 115px 115px;
+    grid-template-columns: 115px 115px;
+  }
+  .footer__block2 .footer__list-item {
+    width: 115px;
+  }
+  .footer__block2 .footer__list-item:nth-child(2n) {
+    padding-left: 15px;
+  }
+  .footer__list-item:nth-child(2) {
+    visibility: hidden;
+    visibility: hidden;
+    padding: 0;
+    margin-bottom: -10px;
+  }
+  .footer__list-item:nth-child(2)::before {
+    visibility: visible;
+    content: "Благодарность клиентов";
+  }
+  .footer__list-item:nth-child(4) {
+    visibility: hidden;
+    visibility: hidden;
+    padding: 0;
+    margin-bottom: -10px;
+  }
+  .footer__list-item:nth-child(4)::before {
+    visibility: visible;
+    content: "Кейсы";
+  }
+}
+@media screen and (max-width: 325px) {
+  .main-container {
+    background-size: auto;
   }
 }

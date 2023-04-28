@@ -16,15 +16,18 @@ body {
   background-position: 50% 0%;
   margin: 0 auto;
 }
-body .wrapper {
+
+.wrapper {
   margin: 0 auto;
   max-width: 1192px;
 }
-body .header__container {
+
+.header__container {
   margin: 0;
   max-width: 1140px;
 }
-body .header {
+
+.header {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 13% 4% 44% 4% 35%;
@@ -38,19 +41,22 @@ body .header {
       -ms-flex-align: end;
           align-items: end;
 }
-body .header > *:nth-child(1) {
+
+.header > *:nth-child(1) {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
 }
-body .header > *:nth-child(2) {
+
+.header > *:nth-child(2) {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
 }
-body .header > *:nth-child(3) {
+
+.header > *:nth-child(3) {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
 }
-body .header__list {
+.header__list {
   list-style: none;
   display: -ms-grid;
   display: grid;
@@ -58,13 +64,13 @@ body .header__list {
   grid-template-columns: repeat(5, 1fr);
   padding-bottom: 5px;
 }
-body .header__list-item {
+.header__list-item {
   margin-right: 30px;
 }
-body .header__list-item:last-child {
+.header__list-item:last-child {
   margin: 0;
 }
-body .header__contacts {
+.header__contacts {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 145px 169px;
@@ -72,14 +78,15 @@ body .header__contacts {
   -ms-grid-column-align: end;
       justify-self: end;
 }
-body .header__contacts .social-network {
+.header__contacts .social-network {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
   grid-template-columns: repeat(3, 1fr);
   justify-items: end;
 }
-body .header__logo-comment {
+
+.header__logo-comment {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
   font-weight: 300;
@@ -88,11 +95,13 @@ body .header__logo-comment {
       -ms-grid-row-align: start;
       align-self: start;
 }
-body .main__container {
+
+.main__container {
   margin: 0;
   max-width: 1192px;
 }
-body .main {
+
+.main {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 40% 31%;
@@ -106,18 +115,18 @@ body .main {
   margin-bottom: 173px;
       grid-template-areas: "left right" ". button";
 }
-body .main__left-block {
+.main__left-block {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: left;
 }
-body .main__right-block {
+.main__right-block {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: right;
   margin-top: 10px;
 }
-body .main__button {
+.main__button {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: button;
@@ -131,13 +140,13 @@ body .main__button {
   color: #E4E5EA;
   border: none;
 }
-body .main__left-header {
+.main__left-header {
   font-family: Inter, Arial, Helvetica, sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
   font-weight: 400;
   font-size: 48px;
 }
-body .main__left-header .colorText {
+.main__left-header .colorText {
   font-weight: 900;
   color: transparent;
   -webkit-background-clip: text;
@@ -145,14 +154,14 @@ body .main__left-header .colorText {
   background-image: -webkit-gradient(linear, left top, right top, from(#FCB045), to(#FF3F78));
   background-image: linear-gradient(to right, #FCB045, #FF3F78);
 }
-body .main__right-header {
+.main__right-header {
   font-family: Inter, Arial, Helvetica, sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
   font-weight: 700;
   font-size: 18px;
   text-align: end;
 }
-body .main__right-header .colorText {
+.main__right-header .colorText {
   font-weight: 700;
   color: transparent;
   -webkit-background-clip: text;
@@ -160,15 +169,17 @@ body .main__right-header .colorText {
   background-image: -webkit-gradient(linear, left top, right top, from(#FCB045), to(#FF3F78));
   background-image: linear-gradient(to right, #FCB045, #FF3F78);
 }
-body .main__left-paragraph {
+.main__left-paragraph {
   margin-top: 30px;
   width: 68%;
   font-size: 18px;
 }
-body .quatroBlock-mobile {
+
+.quatroBlock-mobile {
   display: none;
 }
-body .quatroBlock {
+
+.quatroBlock {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 125px 36px 125px;
@@ -184,23 +195,25 @@ body .quatroBlock {
   text-align: end;
   margin-top: 40px;
 }
-body .quatroBlock__header {
+.quatroBlock__header {
   font-family: Inter, Arial, Helvetica, sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap");
   font-weight: 500;
   font-size: 18px;
 }
-body .quatroBlock__span {
+.quatroBlock__span {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
   font-weight: 400;
   font-size: 16px;
 }
-body .footer-container {
-  margin: 124px 0 0 0;
+
+.footer-container {
+  margin: 0;
   max-width: 1140px;
 }
-body .footer {
+
+.footer {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 200px 107px 425px 107px 300px;
@@ -210,7 +223,7 @@ body .footer {
   grid-template-rows: auto auto;
       grid-template-areas: "block1 block2 block3" ". . commentBlock";
 }
-body .footer__header {
+.footer__header {
   font-family: Montserrat, Arial, Helvetica, sans-serif;
   src: url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap");
   font-weight: 400;
@@ -218,23 +231,23 @@ body .footer__header {
   margin-bottom: 20px;
   color: #656566;
 }
-body .footer__block1 {
+.footer__block1 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: block1;
 }
-body .footer__block2 {
+.footer__block2 {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: block2;
 }
-body .footer__block2 .footer__list {
+.footer__block2 .footer__list {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
 }
-body .footer__block3 {
+.footer__block3 {
   -ms-grid-row: 1;
   -ms-grid-column: 5;
   grid-area: block3;
@@ -244,7 +257,7 @@ body .footer__block3 {
   grid-template-rows: repeat(4, 40px);
   text-align: end;
 }
-body .footer__block4 {
+.footer__block4 {
   -ms-grid-row: 2;
   -ms-grid-column: 5;
   grid-area: commentBlock;
@@ -256,13 +269,13 @@ body .footer__block4 {
   margin-bottom: 20px;
   margin-top: 33px;
 }
-body .footer__comment_underline {
+.footer__comment_underline {
   text-decoration: underline;
   line-height: 20px;
 }
-body .footer__list {
+.footer__list {
   list-style: none;
 }
-body .footer__list-item {
+.footer__list-item {
   padding-bottom: 10px;
 }

@@ -14,6 +14,7 @@ body{
     background-color:$backColor;
     background-position: 50% 0%;
     margin: 0 auto;
+}
 .wrapper{
     @include containerOrientation(0 auto, $bodyAndMainWd);
 }
@@ -126,7 +127,7 @@ body{
 }
 //footer
 .footer-container{
-    @include containerOrientation(124px 0 0 0,$headerAndFooterWd);
+    @include containerOrientation(0,$headerAndFooterWd);
 }
 .footer{
     display:grid;
@@ -173,5 +174,4 @@ body{
             padding-bottom: 10px;
         }
     }
-}
 }
